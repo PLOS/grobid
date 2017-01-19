@@ -1,0 +1,26 @@
+
+description "grobid-tomcat7"
+
+  start on runlevel [2345]
+  stop on runlevel [!2345]
+  respawn
+  respawn limit 10 5
+
+  setuid grobid
+  setgid grobid
+
+  # adapt paths:
+  env JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-x64
+  env CATALINA_HOME=/usr/share/tomcat7
+  env CATALINA_BASE=/opt/grobid
+  # adapt java options to suit your needs:
+  env JAVA_OPTS="-Djava.awt.headless=true -Xms512M -Xmx1024M -server -XX:+UseParallelGC"
+
+  script
+    exec start-stop-daemon --start -d /opt/grobid -c grobid:grobid --exec $CATALINA_HOME/bin/catalina.sh run
+  end script
+
+  # cleanup temp directory after stop
+  post-stop script 
+    rm -rf $CATALINA_BASE/temp/*
+  end script

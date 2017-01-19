@@ -1,0 +1,14 @@
+Source: grobid
+Section: java
+Priority: optional
+Maintainer: PLOS Build & Release Team <it-ops@plos.org>
+Build-Depends: debhelper (>= 8.0.0), libxml2-dev, libxml2-dev:i386, libc6-i386, libgcc-5-dev, libgcc-5-dev:i386, maven, tomcat7-common, tomcat7-user
+Standards-Version: 3.9.4
+Homepage: https://github.com/kermitt2/grobid
+
+Package: grobid-tomcat7
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, tomcat7-common, tomcat7
+Description: GROBID is a bibliographic machine learning library 
+ GROBID is a machine learning library for extracting, parsing and re-structuring
+ raw documents such as PDF into structured TEI-encoded documents.

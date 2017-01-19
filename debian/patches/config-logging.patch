@@ -1,0 +1,19 @@
+Change logging location to tomcat logs dir.
+--- a/grobid-core/src/main/resources/log4j.xml
++++ b/grobid-core/src/main/resources/log4j.xml
+@@ -3,7 +3,7 @@
+ <log4j:configuration>
+         <appender name="LOGFILE" class="org.apache.log4j.DailyRollingFileAppender">
+                 <!--param name="file" value="${catalina.base}/logs/grobid.log" /-->
+-				<param name="file" value="./grobid.log" />
++				<param name="file" value="${catalina.base}/logs/grobid.log" />
+                 <param name="datePattern" value="'.'yyyy-MM-dd" />
+                 <param name="append" value="true" />
+                 <layout class="org.apache.log4j.PatternLayout">
+@@ -14,4 +14,4 @@
+                 <priority value="INFO"></priority>
+                 <appender-ref ref="LOGFILE" />
+         </root>
+-</log4j:configuration>
+\ No newline at end of file
++</log4j:configuration>

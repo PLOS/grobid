@@ -1,0 +1,28 @@
+Sets the paths to _GROBID_HOME, _GROBID_PROPERTY, and _GROBID_SERVICE_PROPERTY.
+I could not get Grobid to recognize these when set as environment variables.
+
+--- a/grobid-service/src/main/webapp/WEB-INF/web.xml
++++ b/grobid-service/src/main/webapp/WEB-INF/web.xml
+@@ -125,19 +125,19 @@
+     <!-- Path to properties files and GROBID_HOME -->
+     <env-entry>
+         <env-entry-name>org.grobid.property</env-entry-name>
+-        <env-entry-value>${_GROBID_PROPERTY}</env-entry-value>
++        <env-entry-value>/opt/grobid/conf/grobid.properties</env-entry-value>
+         <env-entry-type>java.lang.String</env-entry-type>
+     </env-entry>
+ 
+     <env-entry>
+         <env-entry-name>org.grobid.property.service</env-entry-name>
+-        <env-entry-value>${_GROBID_SERVICE_PROPERTY}</env-entry-value>
++        <env-entry-value>/opt/grobid/conf/grobid_service.properties</env-entry-value>
+         <env-entry-type>java.lang.String</env-entry-type>
+     </env-entry>
+ 
+     <env-entry>
+         <env-entry-name>org.grobid.home</env-entry-name>
+-        <env-entry-value>${_GROBID_HOME}</env-entry-value>
++        <env-entry-value>/opt/grobid/data</env-entry-value>
+         <env-entry-type>java.lang.String</env-entry-type>
+     </env-entry>
+ 
