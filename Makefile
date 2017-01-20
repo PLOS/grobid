@@ -10,6 +10,7 @@ install:
 	mvn -Dmaven.test.skip=true -Dmaven.repo.local=$(M2_REPO) clean install -PgenericBuild
 	rm -rf $(FINAL_PATH)
 	tomcat7-instance-create -p 8090 -c 8015 $(FINAL_PATH)
+	mkdir -p $(FINAL_PATH)/common/classes $(FINAL_PATH)/server/classes $(FINAL_PATH)/shared/classes
 	cp grobid-service/target/grobid-service-*.war $(FINAL_PATH)/webapps/grobid.war
 	unzip -d /tmp grobid-home/target/grobid-home-*.zip
 	cp grobid-home/config/*.properties $(FINAL_PATH)/conf

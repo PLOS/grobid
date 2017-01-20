@@ -21,10 +21,6 @@ set -e
 case "$1" in
     configure)
       chown -R grobid:grobid /opt/grobid
-      # see https://bugs.launchpad.net/ubuntu/+source/tomcat7/+bug/1232258
-      cd /usr/share/tomcat7 && ln -sf /var/lib/tomcat7/common .
-      cd /usr/share/tomcat7 && ln -sf /var/lib/tomcat7/server .
-      cd /usr/share/tomcat7 && ln -sf /var/lib/tomcat7/shared .
       service grobid-tomcat7 start
     ;;
 

@@ -8,7 +8,7 @@ Homepage: https://github.com/kermitt2/grobid
 
 Package: grobid-tomcat7
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tomcat7-common, tomcat7
+Depends: ${shlibs:Depends}, ${misc:Depends}, tomcat7-common
 Description: GROBID is a bibliographic machine learning library 
  GROBID is a machine learning library for extracting, parsing and re-structuring
  raw documents such as PDF into structured TEI-encoded documents.
