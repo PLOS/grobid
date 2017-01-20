@@ -8,6 +8,13 @@ grobid inside of a tomcat7 container.
 
 The recommended workflow for building a package is as follows:
 
+1. You need to be running the version and distribution of ubuntu or debian
+you are building a package for.
+
+1. You will need to install some build dependencies: `apt-get install debhelper
+libxml2-dev libxml2-dev:i386 libc6-i386 libgcc-5-dev libgcc-5-dev:i386
+maven tomcat7-common tomcat7-user`
+
 1. First, create a new branch off of the commit you want to release.  For
 example, grobid uses tags like `grobid-parent-0.4.1`. To build grobid-0.4.1,
 you might do something like `git checkout -b build/0.4.1 grobid-parent-0.4.1`.
