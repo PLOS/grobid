@@ -1,4 +1,4 @@
-Source: grobid
+Source: grobid-tomcat7
 Section: java
 Priority: optional
 Maintainer: PLOS Build & Release Team <it-ops@plos.org>
