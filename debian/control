@@ -2,7 +2,7 @@ Source: grobid-tomcat7
 Section: java
 Priority: optional
 Maintainer: PLOS Build & Release Team <it-ops@plos.org>
-Build-Depends: debhelper (>= 8.0.0), libxml2-dev, libxml2-dev:i386, libc6-i386, libgcc-5-dev, libgcc-5-dev:i386, maven, tomcat7-common, tomcat7-user
+Build-Depends: debhelper (>= 8.0.0), quilt, libxml2-dev, libxml2-dev:i386, libc6-i386, libgcc-5-dev, libgcc-5-dev:i386, maven, tomcat7-common, tomcat7-user
 Standards-Version: 3.9.4
 Homepage: https://github.com/kermitt2/grobid
 
