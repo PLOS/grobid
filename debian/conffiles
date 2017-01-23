@@ -6,5 +6,3 @@
 /opt/grobid/conf/logging.properties
 /opt/grobid/conf/context.xml
 /opt/grobid/conf/catalina.properties
-/etc/init/grobid-tomcat7.conf
-

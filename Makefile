@@ -14,6 +14,7 @@ install:
 	cp grobid-service/target/grobid-service-*.war $(FINAL_PATH)/webapps/grobid.war
 	unzip -d /tmp grobid-home/target/grobid-home-*.zip
 	cp grobid-home/config/*.properties $(FINAL_PATH)/conf
+	chmod 0644 $(FINAL_PATH)/conf/*.properties
 	mkdir $(FINAL_PATH)/data
 	cp -R /tmp/grobid-home/language-detection /tmp/grobid-home/lexicon /tmp/grobid-home/lib $(FINAL_PATH)/data
 	cp -R /tmp/grobid-home/models /tmp/grobid-home/pdf2xml $(FINAL_PATH)/data
