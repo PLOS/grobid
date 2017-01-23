@@ -21,7 +21,7 @@ set -e
 case "$1" in
     configure)
       chown -R grobid:grobid /opt/grobid
-      service grobid-tomcat7 start
+      service grobid-tomcat7 restart
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

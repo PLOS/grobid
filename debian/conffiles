@@ -1,0 +1,10 @@
+/opt/grobid/conf/web.xml
+/opt/grobid/conf/server.xml
+/opt/grobid/conf/grobid.properties
+/opt/grobid/conf/grobid_service.properties
+/opt/grobid/conf/tomcat-users.xml
+/opt/grobid/conf/logging.properties
+/opt/grobid/conf/context.xml
+/opt/grobid/conf/catalina.properties
+/etc/init/grobid-tomcat7.conf
+

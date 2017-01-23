@@ -1,0 +1,6 @@
+.pc/
+debian/files
+debian/*.debhelper
+debian/*.substvars
+debian/grobid-tomcat7/
+debian/*.log
