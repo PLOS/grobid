@@ -2,7 +2,7 @@
 
 version=${1}
 deb_revision=${2}
-export DEBFULLNAME="PLOS Grobid Packagers"
+export DEBFULLNAME="PLOS"
 export DEBEMAIL="it-ops@plos.org"
 export QUILT_PATCHES="debian/patches"
 
@@ -26,7 +26,11 @@ quilt push -a
 rm -f debian/changelog
 dch --create --distribution stable -v "${version}-${deb_revision}" --package grobid-tomcat7 "this file is not maintained"
 
+if [[ -f LICENSE ]]; then
+    cp LICENSE debian/copyright
+fi
+
 dpkg-buildpackage -b -us -uc
 
 git checkout grobid-trainer/resources/dataset/entities/chemistry/corpus/chemistry-types.xml.orig
-git checkout debian/changelog
+git reset --hard HEAD
