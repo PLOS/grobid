@@ -1,0 +1,4 @@
+#!/bin/bash
+echo 'Preinstall Script Executing'
+echo 'sudo service tomcat7 stop'
+

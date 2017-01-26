@@ -1,0 +1,10 @@
+Package: [[name]]
+Version: [[version]]
+Section: misc
+Priority: optional
+Architecture: all
+Depends: jdk (>= 1.8)
+Maintainer: Jeffrey Gray <jgray@plos.org>
+Description: PLOS Grobid build for aperta
+Distribution: development
+Depends: default-jre | java8-runtime

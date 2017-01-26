@@ -1,0 +1,3 @@
+#!/bin/bash
+echo 'Postinst script executing'
+echo 'sudo service tomcat7 start'
