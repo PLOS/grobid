@@ -20,9 +20,9 @@
         </license>
     </licenses>
     <modules>
-        <!-- <module>grobid-home</module>
+        <module>grobid-home</module>
         <module>grobid-core</module>
-        <module>grobid-trainer</module> -->
+        <module>grobid-trainer</module>
         <module>grobid-service</module>
     </modules>
     <properties>
